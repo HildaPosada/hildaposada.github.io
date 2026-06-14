@@ -138,6 +138,17 @@ p { text-wrap: pretty; }
   font-weight: 700;
   font-size: var(--text-lg);
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.nav-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
 }
 .nav-links {
   display: flex; gap: var(--space-10);
