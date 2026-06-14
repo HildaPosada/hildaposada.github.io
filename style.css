@@ -555,3 +555,94 @@ p { text-wrap: pretty; }
   .project-img-wrap { height: 160px; }
   .project-card.featured .project-img-wrap { height: 200px; }
 }
+
+/* ---- TABLEAU FEATURED CARD ---- */
+.tableau-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  grid-column: span 2;
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+.tableau-header {
+  padding: var(--space-8) var(--space-8) var(--space-6);
+}
+.tableau-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--accent);
+}
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.75); }
+}
+.tableau-card h3 {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: var(--space-3);
+}
+.tableau-desc {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 72ch;
+  margin-bottom: var(--space-5);
+}
+.tableau-embed-wrap {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.tableau-embed-inner {
+  width: 100%;
+  min-height: 600px;
+}
+.tableau-embed-inner tableau-viz {
+  width: 100%;
+  display: block;
+}
+.project-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-5) var(--space-8) var(--space-6);
+  flex-wrap: wrap;
+}
+.project-footer .project-link {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .tableau-card { grid-column: span 1; }
+  .tableau-embed-inner { min-height: 400px; }
+  .tableau-card h3 { font-size: var(--text-lg); }
+}

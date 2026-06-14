@@ -9,9 +9,7 @@
   <meta property="og:description" content="83% ROC-AUC churn model. $1.4M at-risk revenue identified. 5 ML projects across 60+ team members." />
   <meta property="og:type" content="website" />
 
-  <!-- Fonts: Cabinet Grotesk (display) + Satoshi (body) -->
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@300,400,500,700,800,900&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -25,7 +23,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-right">
-      <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
       <a href="#contact" class="btn-outline">Let's talk <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
@@ -53,28 +51,14 @@
       <a href="#work" class="btn-primary">View ML projects <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="#about" class="btn-ghost">About me</a>
     </div>
-
-    <!-- Stats bar -->
     <div class="stats-bar">
-      <div class="stat">
-        <span class="stat-num">83%</span>
-        <span class="stat-label">ROC-AUC</span>
-      </div>
+      <div class="stat"><span class="stat-num">83%</span><span class="stat-label">ROC-AUC</span></div>
       <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">$1.4M</span>
-        <span class="stat-label">At-risk revenue identified</span>
-      </div>
+      <div class="stat"><span class="stat-num">$1.4M</span><span class="stat-label">At-risk revenue identified</span></div>
       <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">60+</span>
-        <span class="stat-label">Team members led</span>
-      </div>
+      <div class="stat"><span class="stat-num">60+</span><span class="stat-label">Team members led</span></div>
       <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">80%</span>
-        <span class="stat-label">Pipeline reduction</span>
-      </div>
+      <div class="stat"><span class="stat-num">80%</span><span class="stat-label">Pipeline reduction</span></div>
     </div>
   </section>
 
@@ -88,22 +72,10 @@
           <p class="about-body">I am a Data Scientist and ML Engineer with an MS in Organic Chemistry from CSULB (2023) — the same field recognized by the 2024 Nobel Prize in Chemistry. I bridge scientific rigor with production-grade ML to solve problems in healthcare, drug discovery, and predictive analytics.</p>
           <p class="about-body">At Omdena I led 5 international ML projects across 60+ team members. As an AI Trainer at Outlier I improved model accuracy by 15%. Currently teaching Data Analytics at Calbright College.</p>
           <div class="skills-grid">
-            <div class="skill-group">
-              <p class="skill-label">Languages</p>
-              <p>Python, SQL, JavaScript, Go</p>
-            </div>
-            <div class="skill-group">
-              <p class="skill-label">ML / AI</p>
-              <p>scikit-learn, PyTorch, LlamaIndex, LangChain, RAG</p>
-            </div>
-            <div class="skill-group">
-              <p class="skill-label">Data</p>
-              <p>Pandas, NumPy, Streamlit, Tableau, AWS</p>
-            </div>
-            <div class="skill-group">
-              <p class="skill-label">Domain</p>
-              <p>Drug Discovery, Carbon Capture, Churn Modeling, NLP</p>
-            </div>
+            <div class="skill-group"><p class="skill-label">Languages</p><p>Python, SQL, JavaScript, Go</p></div>
+            <div class="skill-group"><p class="skill-label">ML / AI</p><p>scikit-learn, PyTorch, LlamaIndex, LangChain, RAG</p></div>
+            <div class="skill-group"><p class="skill-label">Data</p><p>Pandas, NumPy, Streamlit, Tableau, AWS</p></div>
+            <div class="skill-group"><p class="skill-label">Domain</p><p>Drug Discovery, Carbon Capture, Churn Modeling, NLP</p></div>
           </div>
         </div>
         <div class="about-right">
@@ -161,135 +133,124 @@
       <h2>ML Projects</h2>
       <div class="projects-grid">
 
-        <!-- FEATURED -->
-        <a href="https://github.com/HildaPosada/customer-churn-analysis" target="_blank" rel="noopener" class="project-card featured">
-          <div class="project-img-wrap">
-            <img src="project-churn.png" alt="Customer Churn Prediction ML visualization" loading="lazy" />
-            <div class="project-img-overlay"></div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">Machine Learning</span>
-              <span class="project-tag">Python</span>
+        <!-- FEATURED: TABLEAU EMBED -->
+        <div class="project-card featured tableau-card">
+          <div class="tableau-header">
+            <div class="tableau-meta-row">
+              <div class="project-meta">
+                <span class="project-tag">Machine Learning</span>
+                <span class="project-tag">Tableau</span>
+                <span class="project-tag">Python</span>
+              </div>
+              <span class="live-badge">
+                <span class="live-dot"></span>Live Dashboard
+              </span>
             </div>
             <h3>Customer Churn Prediction</h3>
-            <p>ML model predicting telecom customer churn. 83% ROC-AUC score. Identified $1.4M at-risk revenue and designed retention strategy delivering $146K projected annual savings.</p>
+            <p class="tableau-desc">ML model on 7,043 telecom customers. 83% ROC-AUC. Identified 1,869 at-risk customers representing $1.4M revenue. Month-to-month contracts drive 43% churn rate. Retention strategy delivers $146K projected annual savings.</p>
             <div class="project-stats">
               <span>83% ROC-AUC</span>
+              <span>7,043 customers</span>
               <span>$1.4M identified</span>
               <span>$146K savings</span>
             </div>
-            <span class="project-link">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
           </div>
-        </a>
 
-        <a href="https://github.com/HildaPosada/MOF-CO2-Adsorption-Predictor" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="project-mof.png" alt="MOF CO2 Adsorption crystal structure" loading="lazy" />
-            <div class="project-img-overlay"></div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">Chemistry AI</span>
-              <span class="project-tag">Python</span>
+          <!-- Tableau Embed -->
+          <div class="tableau-embed-wrap">
+            <div class="tableau-embed-inner">
+              <tableau-viz
+                id="tableau-churn"
+                src="https://public.tableau.com/views/CustomerChurnAnalysis_17590022655190/CustomerChurnAnalysisDashboard"
+                toolbar="hidden"
+                hide-tabs
+                width="100%"
+                height="600">
+              </tableau-viz>
             </div>
+          </div>
+
+          <div class="project-footer">
+            <a href="https://public.tableau.com/app/profile/hilda.posada/viz/CustomerChurnAnalysis_17590022655190/CustomerChurnAnalysisDashboard" target="_blank" rel="noopener" class="project-link">
+              Open full dashboard <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+            <a href="https://github.com/HildaPosada/customer-churn-analysis" target="_blank" rel="noopener" class="project-link">
+              View code on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: MOF -->
+        <a href="https://github.com/HildaPosada/MOF-CO2-Adsorption-Predictor" target="_blank" rel="noopener" class="project-card">
+          <div class="project-img-wrap"><img src="project-mof.png" alt="MOF CO2 Adsorption" loading="lazy" /><div class="project-img-overlay"></div></div>
+          <div class="project-body">
+            <div class="project-meta"><span class="project-tag">Chemistry AI</span><span class="project-tag">Python</span></div>
             <h3>MOF CO2 Adsorption Predictor</h3>
             <p>Predicting carbon capture potential of Metal-Organic Frameworks using ML and materials science. Research-grade ML bridging chemistry and climate tech.</p>
             <span class="project-link">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
           </div>
         </a>
 
+        <!-- CARD 3: MOLECULE -->
         <a href="https://github.com/HildaPosada/Chemical-Molecule-Property-Prediction-Using-Neural-Networks" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="project-molecule.png" alt="Molecule property prediction neural network" loading="lazy" />
-            <div class="project-img-overlay"></div>
-          </div>
+          <div class="project-img-wrap"><img src="project-molecule.png" alt="Molecule Property Prediction" loading="lazy" /><div class="project-img-overlay"></div></div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">Neural Networks</span>
-              <span class="project-tag">Python</span>
-            </div>
+            <div class="project-meta"><span class="project-tag">Neural Networks</span><span class="project-tag">Python</span></div>
             <h3>Molecule Property Prediction</h3>
             <p>Neural network model predicting chemical molecule properties. Combines deep learning with domain expertise in organic chemistry.</p>
             <span class="project-link">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
           </div>
         </a>
 
+        <!-- CARD 4: PDF RAG -->
         <a href="https://github.com/HildaPosada/PDF-Knowledge-Bot-LlamaIndex-RAG-" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="project-pdf-rag.png" alt="PDF RAG knowledge bot pipeline" loading="lazy" />
-            <div class="project-img-overlay"></div>
-          </div>
+          <div class="project-img-wrap"><img src="project-pdf-rag.png" alt="PDF Knowledge Bot" loading="lazy" /><div class="project-img-overlay"></div></div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">RAG</span>
-              <span class="project-tag">LlamaIndex</span>
-              <span class="project-tag">Streamlit</span>
-            </div>
+            <div class="project-meta"><span class="project-tag">RAG</span><span class="project-tag">LlamaIndex</span><span class="project-tag">Streamlit</span></div>
             <h3>PDF Knowledge Bot</h3>
             <p>Upload PDF, ask questions, get grounded answers. Built with LlamaIndex RAG pipeline and Streamlit. Production-ready document QA system.</p>
             <span class="project-link">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
           </div>
         </a>
 
+        <!-- CARD 5: ANIMAL -->
         <a href="https://github.com/HildaPosada/animal-image-classifier" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="project-animal.png" alt="Animal image classifier CNN" loading="lazy" />
-            <div class="project-img-overlay"></div>
-          </div>
+          <div class="project-img-wrap"><img src="project-animal.png" alt="Animal Image Classifier" loading="lazy" /><div class="project-img-overlay"></div></div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">Deep Learning</span>
-              <span class="project-tag">Streamlit</span>
-            </div>
+            <div class="project-meta"><span class="project-tag">Deep Learning</span><span class="project-tag">Streamlit</span></div>
             <h3>Animal Image Classifier</h3>
             <p>Deep learning model classifying 10 exotic animal species. Built with CNN architecture and deployed via Streamlit for real-time inference.</p>
             <span class="project-link">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
           </div>
         </a>
 
+        <!-- CARD 6: DASHBOARD -->
         <a href="https://github.com/HildaPosada/techgear-plus-sales-dashboard" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="project-dashboard.png" alt="E-commerce sales analytics dashboard" loading="lazy" />
-            <div class="project-img-overlay"></div>
-          </div>
+          <div class="project-img-wrap"><img src="project-dashboard.png" alt="E-Commerce Sales Dashboard" loading="lazy" /><div class="project-img-overlay"></div></div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">Analytics</span>
-              <span class="project-tag">Python</span>
-            </div>
+            <div class="project-meta"><span class="project-tag">Analytics</span><span class="project-tag">Python</span></div>
             <h3>E-Commerce Sales Dashboard</h3>
             <p>Executive sales performance dashboard for e-commerce analytics. Tracks KPIs, trends, and revenue across product categories in real time.</p>
             <span class="project-link">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
           </div>
         </a>
 
+        <!-- CARD 7: GIGEFX -->
         <a href="https://github.com/HildaPosada/GigEfx-Labs" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="project-gigefx.png" alt="GigEfx real-time pricing database pipeline" loading="lazy" />
-            <div class="project-img-overlay"></div>
-          </div>
+          <div class="project-img-wrap"><img src="project-gigefx.png" alt="GigEfx Pricing DB" loading="lazy" /><div class="project-img-overlay"></div></div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">Data Engineering</span>
-              <span class="project-tag">Python</span>
-            </div>
+            <div class="project-meta"><span class="project-tag">Data Engineering</span><span class="project-tag">Python</span></div>
             <h3>GigEfx Real-Time Pricing DB</h3>
             <p>Centralized database for real-time pricing data. Achieved 50% QC accuracy improvement through automated data validation pipelines.</p>
             <span class="project-link">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
           </div>
         </a>
 
+        <!-- CARD 8: MULTI-AGENT -->
         <a href="https://github.com/HildaPosada/MultiAgent-Quickstart" target="_blank" rel="noopener" class="project-card">
-          <div class="project-img-wrap">
-            <img src="project-multiagent.png" alt="Multi-agent system coordination" loading="lazy" />
-            <div class="project-img-overlay"></div>
-          </div>
+          <div class="project-img-wrap"><img src="project-multiagent.png" alt="Multi-Agent System" loading="lazy" /><div class="project-img-overlay"></div></div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">Agentic AI</span>
-              <span class="project-tag">Python</span>
-            </div>
+            <div class="project-meta"><span class="project-tag">Agentic AI</span><span class="project-tag">Python</span></div>
             <h3>Multi-Agent System Quickstart</h3>
             <p>Quickstart guide for multi-agent systems with Coral Protocol. Demonstrates agent coordination, task delegation, and async communication patterns.</p>
             <span class="project-link">View on GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
@@ -325,6 +286,8 @@
     </div>
   </footer>
 
+  <!-- Tableau Embed API -->
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
