@@ -664,3 +664,69 @@ p { text-wrap: pretty; }
   .tableau-embed-inner { min-height: 400px; }
   .tableau-card h3 { font-size: var(--text-lg); }
 }
+
+/* ============================================================
+   ENTRANCE ANIMATIONS (from reference site — enter/exit system)
+   ============================================================ */
+
+@keyframes hp-enter {
+  0% {
+    opacity: var(--hp-enter-opacity, 0);
+    transform: translate3d(
+      var(--hp-enter-translate-x, 0),
+      var(--hp-enter-translate-y, 20px),
+      0
+    ) scale3d(
+      var(--hp-enter-scale, 0.97),
+      var(--hp-enter-scale, 0.97),
+      1
+    );
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes hp-fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes hp-scale-in {
+  0%   { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Base state: hidden until JS adds .is-visible */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0) scale(0.97);
+  transition: none;
+}
+
+/* Triggered state */
+.animate-on-scroll.is-visible {
+  animation: hp-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger delays for grid children */
+.animate-on-scroll[data-delay="1"] { animation-delay: 0.05s; }
+.animate-on-scroll[data-delay="2"] { animation-delay: 0.12s; }
+.animate-on-scroll[data-delay="3"] { animation-delay: 0.19s; }
+.animate-on-scroll[data-delay="4"] { animation-delay: 0.26s; }
+.animate-on-scroll[data-delay="5"] { animation-delay: 0.33s; }
+.animate-on-scroll[data-delay="6"] { animation-delay: 0.40s; }
+.animate-on-scroll[data-delay="7"] { animation-delay: 0.47s; }
+.animate-on-scroll[data-delay="8"] { animation-delay: 0.54s; }
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+  .animate-on-scroll.is-visible {
+    animation: none;
+  }
+}
