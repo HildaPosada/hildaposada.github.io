@@ -283,49 +283,6 @@ p { text-wrap: pretty; }
 /* ---- ABOUT ---- */
 .about { background: var(--surface); }
 
-/* ABOUT: greeting + photo intro row */
-.about-intro-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(var(--space-12), 6vw, var(--space-24));
-  align-items: center;
-  margin-bottom: var(--space-16);
-  max-width: 800px;
-}
-.greeting-img {
-  width: clamp(200px, 40vw, 320px);
-  height: auto;
-  display: block;
-  filter: invert(1);
-}
-.about-photo {
-  display: flex;
-  justify-content: center;
-}
-.about-photo-circle {
-  width: clamp(200px, 30vw, 280px);
-  height: clamp(200px, 30vw, 280px);
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid var(--accent);
-  box-shadow: 0 0 0 6px var(--accent-dim);
-}
-.about-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* ABOUT: bio text block */
-.about-bio {
-  max-width: 720px;
-  margin-bottom: var(--space-16);
-}
-.about-bio strong {
-  color: var(--text);
-}
-
 /* ABOUT: period line under company */
 .exp-period {
   font-size: var(--text-xs);
@@ -365,31 +322,6 @@ p { text-wrap: pretty; }
 .edu-org {
   font-size: var(--text-xs);
   color: var(--text-muted);
-}
-
-/* ABOUT: research interests */
-.about-research-section {
-  margin-top: var(--space-20);
-  padding-top: var(--space-16);
-  border-top: 1px solid var(--border);
-}
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: var(--space-8);
-  max-width: 900px;
-}
-.research-title {
-  font-size: var(--text-base);
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: var(--space-3);
-  font-family: var(--font-display);
-}
-.research-desc {
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  line-height: 1.65;
 }
 
 .about-grid {
@@ -591,10 +523,7 @@ p { text-wrap: pretty; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .about-grid { grid-template-columns: 1fr; }
-  .about-intro-row { grid-template-columns: 1fr; gap: var(--space-10); }
-  .about-photo { justify-content: flex-start; }
   .edu-grid { grid-template-columns: 1fr 1fr; }
-  .research-grid { grid-template-columns: 1fr; }
   .project-card.featured { grid-column: span 1; }
   .projects-grid { grid-template-columns: 1fr; }
   .stats-bar { gap: var(--space-5); }
